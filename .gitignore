@@ -1,0 +1,31 @@
+# =========================================
+# Tax Diagnostic Engine - Git Hygiene
+# Ignora artefatos locais/gerados para manter
+# o repositório limpo e auditável.
+# =========================================
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# PyInstaller (mantemos TaxDiagnosticDemo.spec versionado)
+build/
+dist/
+
+# Outputs gerados
+outputs/
+outputs_demo/
+outputs_pdfs/
+outputs_demo_pdfs/
+outputs_pdf/
+
+# Dados locais (histórico append-only local)
+data/*.jsonl
+
+# Logs / OS
+*.log
+.DS_Store
+Thumbs.db

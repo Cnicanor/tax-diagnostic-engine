@@ -1,0 +1,7 @@
+# Substituir @REPLACE_WITH_GITHUB_USERNAME pelo owner real do repositório.
+
+rulesets/** @REPLACE_WITH_GITHUB_USERNAME
+tax_engine.py @REPLACE_WITH_GITHUB_USERNAME
+regimes.py @REPLACE_WITH_GITHUB_USERNAME
+ruleset_loader.py @REPLACE_WITH_GITHUB_USERNAME
+tools/ruleset_audit.py @REPLACE_WITH_GITHUB_USERNAME

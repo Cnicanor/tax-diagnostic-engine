@@ -1,0 +1,57 @@
+name: Bug Report
+description: Reportar falha com contexto reproduzível e impacto.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição do Bug
+      description: O que está quebrado e qual impacto?
+      placeholder: Descreva comportamento atual e esperado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Passos para Reproduzir
+      description: Como reproduzir o problema?
+      placeholder: |
+        1) ...
+        2) ...
+        3) ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: escopo
+    attributes:
+      label: Escopo/Área Afetada
+      description: Quais módulos/regimes são impactados?
+      placeholder: Ex.: tax_engine.py, regimes.py, history_store.py, rulesets...
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências
+      description: Logs, stacktrace, prints de relatório e outputs relevantes.
+      placeholder: Cole logs e evidências objetivas.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: Checklist de Validação
+      description: Marque os itens obrigatórios para correção.
+      options:
+        - label: Testes executados com sucesso (`python -m unittest -v`)
+        - label: Ruleset audit executado com sucesso (`python tools/ruleset_audit.py`)
+        - label: Sem artefatos no PR (`__pycache__`, `build`, `dist`, `outputs`, `*.jsonl`, PDFs gerados)
+        - label: Evidências anexadas (antes/depois)
+        - label: Impacto esperado e risco residual descritos
+

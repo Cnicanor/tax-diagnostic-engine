@@ -1,0 +1,46 @@
+Empresa analisada: metalurgica alfa ltda
+
+==============================================
+RELATÓRIO EXECUTIVO — DIAGNÓSTICO TRIBUTÁRIO
+==============================================
+Receita anual informada: R$ 500.000,00
+Alíquota atual informada: 24,00%
+Imposto estimado (atual): R$ 120.000,00
+
+Faixa de impacto estimado (pós-reforma):
+- Mínimo: -1,00%
+- Máximo: 3,00%
+
+Classificação predominante: Baixo impacto
+Recomendação geral: Monitorar mudanças e manter estratégia atual.
+
+Detalhamento por cenário:
+----------------------------------------------
+
+[Otimista (23%)]
+Alíquota reforma: 23,00%
+Imposto pós-reforma: R$ 115.000,00
+Diferença vs atual: R$ -5.000,00
+Impacto: -1,00%
+Classificação: Baixo impacto
+Recomendação: Monitorar mudanças e manter estratégia atual.
+
+[Base (25%)]
+Alíquota reforma: 25,00%
+Imposto pós-reforma: R$ 125.000,00
+Diferença vs atual: R$ 5.000,00
+Impacto: 1,00%
+Classificação: Baixo impacto
+Recomendação: Monitorar mudanças e manter estratégia atual.
+
+[Pessimista (27%)]
+Alíquota reforma: 27,00%
+Imposto pós-reforma: R$ 135.000,00
+Diferença vs atual: R$ 15.000,00
+Impacto: 3,00%
+Classificação: Baixo impacto
+Recomendação: Monitorar mudanças e manter estratégia atual.
+
+----------------------------------------------
+Observação: simulação simplificada para fins de diagnóstico inicial.
+==============================================

@@ -1,0 +1,28 @@
+{
+  "simples": {
+    "rbt12_max": 4800000,
+    "requires": [
+      "rbt12",
+      "anexo_simples"
+    ],
+    "impedimentos_placeholder": {
+      "enabled": true,
+      "message": "Lista completa de impedimentos legais será evoluída em versão futura."
+    }
+  },
+  "presumido": {
+    "receita_anual_max": 78000000,
+    "requires": [
+      "receita_anual"
+    ],
+    "warnings_when_missing": [
+      "tipo_atividade"
+    ]
+  },
+  "real": {
+    "always_allowed": true,
+    "warnings": [
+      "Margem de lucro insuficiente ou ausente pode reduzir precisão da estimativa."
+    ]
+  }
+}

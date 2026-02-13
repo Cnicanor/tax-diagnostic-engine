@@ -1,0 +1,49 @@
+Empresa analisada: IAR IE
+
+==============================================
+RELATÓRIO EXECUTIVO — DIAGNÓSTICO TRIBUTÁRIO
+==============================================
+
+Regime atual: Simples Nacional (v1)
+Detalhes do regime: {'aliquota_efetiva': 0.04}
+Receita anual informada: R$ 81.000,00
+Alíquota atual informada: 0,00%
+Imposto estimado (atual): R$ 3.240,00
+
+Faixa de impacto estimado (pós-reforma):
+- Mínimo: 19,00%
+- Máximo: 23,00%
+
+Classificação predominante: Alto impacto
+Recomendação geral: Revisão urgente de precificação, capital de giro e planejamento tributário.
+
+Detalhamento por cenário:
+----------------------------------------------
+
+[Otimista (23%)]
+Alíquota reforma: 23,00%
+Imposto pós-reforma: R$ 18.630,00
+Diferença vs atual: R$ 15.390,00
+Impacto: 19,00%
+Classificação: Alto impacto
+Recomendação: Revisão urgente de precificação, capital de giro e planejamento tributário.
+
+[Base (25%)]
+Alíquota reforma: 25,00%
+Imposto pós-reforma: R$ 20.250,00
+Diferença vs atual: R$ 17.010,00
+Impacto: 21,00%
+Classificação: Alto impacto
+Recomendação: Revisão urgente de precificação, capital de giro e planejamento tributário.
+
+[Pessimista (27%)]
+Alíquota reforma: 27,00%
+Imposto pós-reforma: R$ 21.870,00
+Diferença vs atual: R$ 18.630,00
+Impacto: 23,00%
+Classificação: Alto impacto
+Recomendação: Revisão urgente de precificação, capital de giro e planejamento tributário.
+
+----------------------------------------------
+Observação: simulação simplificada para fins de diagnóstico inicial.
+==============================================

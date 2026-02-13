@@ -1,0 +1,28 @@
+{
+  "portes": [
+    {
+      "porte": "MEI",
+      "ordem": 1,
+      "limite_receita_anual": 81000.0,
+      "notes": "Placeholder para elegibilidade MEI."
+    },
+    {
+      "porte": "ME",
+      "ordem": 2,
+      "limite_receita_anual": 360000.0,
+      "notes": "Referencia de porte empresarial."
+    },
+    {
+      "porte": "EPP",
+      "ordem": 3,
+      "limite_receita_anual": 4800000.0,
+      "notes": "Referencia de porte empresarial (limite Simples)."
+    },
+    {
+      "porte": "ACIMA_EPP",
+      "ordem": 4,
+      "limite_receita_anual": 78000000.0,
+      "notes": "Faixa acima de EPP usada para metadados e comparativo."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "regimes": [
+    {
+      "regime_code": "SIMPLES",
+      "display_name": "Simples Nacional",
+      "enabled": true,
+      "requires_fields": [
+        "receita_anual",
+        "rbt12",
+        "anexo_simples"
+      ],
+      "notes": "Calculo tabelado por anexo/faixa com fator R para III/V."
+    },
+    {
+      "regime_code": "PRESUMIDO",
+      "display_name": "Lucro Presumido",
+      "enabled": true,
+      "requires_fields": [
+        "receita_anual"
+      ],
+      "notes": "Diagnostico simplificado com presuncao por tipo de atividade."
+    },
+    {
+      "regime_code": "REAL",
+      "display_name": "Lucro Real",
+      "enabled": true,
+      "requires_fields": [
+        "receita_anual",
+        "margem_lucro"
+      ],
+      "notes": "Estimativa por margem, com componente de PIS/COFINS nao cumulativo."
+    },
+    {
+      "regime_code": "MEI",
+      "display_name": "MEI (placeholder)",
+      "enabled": false,
+      "requires_fields": [
+        "receita_anual"
+      ],
+      "notes": "Placeholder para roadmap de produtos por porte."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "pis": 0.0065,
+  "cofins": 0.03,
+  "irpj": 0.15,
+  "adicional_irpj": 0.10,
+  "csll": 0.09,
+  "limites_adicional_irpj": {
+    "mensal": 20000,
+    "trimestral": 60000,
+    "anual": 240000
+  },
+  "percentual_presuncao": {
+    "Comercio": 0.08,
+    "Industria": 0.08,
+    "Servicos (geral)": 0.32,
+    "Outros": 0.32
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "ruleset_id": "BR_TAX_2026_V1",
+  "vigencia_inicio": "2026-01-01",
+  "vigencia_fim": null,
+  "descricao": "Ruleset base 2026 - pre implementacao Simples completo",
+  "fonte_legal_base": [
+    "RIR/2018 (Decreto 9.580/2018)",
+    "LC 123/2006 - Simples Nacional"
+  ],
+  "fontes_oficiais": [
+    {
+      "titulo": "Lei Complementar no 123/2006 (Simples Nacional)",
+      "orgao": "Presidencia da Republica / Casa Civil",
+      "identificador": "LC 123/2006",
+      "referencia": "Art. 18; Anexos I, II, III, IV e V; regra de fator R",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm"
+    },
+    {
+      "titulo": "Regulamento do Imposto sobre a Renda (RIR/2018)",
+      "orgao": "Presidencia da Republica / Casa Civil",
+      "identificador": "Decreto 9.580/2018",
+      "referencia": "Regras gerais de IRPJ/CSLL para pessoas juridicas",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/decreto/d9580.htm"
+    },
+    {
+      "titulo": "Lei no 9.718/1998",
+      "orgao": "Presidencia da Republica / Casa Civil",
+      "identificador": "Lei 9.718/1998",
+      "referencia": "Base normativa para regime cumulativo de PIS/COFINS (premissa geral do MVP)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9718.htm"
+    },
+    {
+      "titulo": "Lei no 10.637/2002",
+      "orgao": "Presidencia da Republica / Casa Civil",
+      "identificador": "Lei 10.637/2002",
+      "referencia": "PIS nao cumulativo (aliquota de referencia no MVP de Lucro Real)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10637.htm"
+    },
+    {
+      "titulo": "Lei no 10.833/2003",
+      "orgao": "Presidencia da Republica / Casa Civil",
+      "identificador": "Lei 10.833/2003",
+      "referencia": "COFINS nao cumulativo (aliquota de referencia no MVP de Lucro Real)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.833.htm"
+    },
+    {
+      "titulo": "Lei no 9.715/1998",
+      "orgao": "Presidencia da Republica / Casa Civil",
+      "identificador": "Lei 9.715/1998",
+      "referencia": "PIS/Pasep em regime cumulativo (contexto complementar de rastreabilidade)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9715.htm"
+    }
+  ],
+  "cenarios_reforma": {
+    "Otimista (23%)": 0.23,
+    "Base (25%)": 0.25,
+    "Pessimista (27%)": 0.27
+  },
+  "audit_sentinels": {
+    "simples": [
+      {
+        "anexo": "III",
+        "faixa": 4,
+        "aliquota_nominal": 0.16,
+        "parcela_deduzir": 35640.0,
+        "percentuais_partilha": {
+          "IRPJ": 0.04,
+          "CSLL": 0.035,
+          "PIS": 0.0286,
+          "COFINS": 0.1312,
+          "CPP": 0.434,
+          "ICMS": 0.0,
+          "ISS": 0.3312
+        }
+      }
+    ]
+  }
+}

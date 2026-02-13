@@ -1,0 +1,114 @@
+=== RULESET AUDIT REPORT (FULL) ===
+Ruleset: BR_TAX_2026_V1
+Timestamp: 2026-02-13T08:40:46
+Overall: PASS
+Ruleset hash (SHA-256): 077db9b20d3954cadfd89f516e820304ad7d782124723c16386f076a6659fa18
+Baseline hash (SHA-256): 077db9b20d3954cadfd89f516e820304ad7d782124723c16386f076a6659fa18
+
+Metadata:
+- ruleset_id: BR_TAX_2026_V1
+- vigencia_inicio: 2026-01-01
+- vigencia_fim: None
+- descricao: Ruleset base 2026 - pre implementacao Simples completo
+
+File hashes:
+- simples_tables.json
+  ruleset : 36846443bbfbaeb6d2daf0e13ec1f81bb57ad72bac1986b839894cd49ff50200
+  baseline: 36846443bbfbaeb6d2daf0e13ec1f81bb57ad72bac1986b839894cd49ff50200
+- presumido_params.json
+  ruleset : 6fb3cb4483b79b3b3c9c443885e646996b640145816c92c9d7b6b9d229aacd86
+  baseline: 6fb3cb4483b79b3b3c9c443885e646996b640145816c92c9d7b6b9d229aacd86
+- real_params.json
+  ruleset : 7d929c89f4c88bf8f822fbcd0405663779cce3b99728eae729fa434cb15e6856
+  baseline: 7d929c89f4c88bf8f822fbcd0405663779cce3b99728eae729fa434cb15e6856
+- eligibility_rules.json
+  ruleset : 4dc26b843aa715ed2d9db442e0e17d462df2d1c33667d135edac00361ecc2560
+  baseline: 4dc26b843aa715ed2d9db442e0e17d462df2d1c33667d135edac00361ecc2560
+
+Warnings:
+- none
+
+Checks:
+[PASS] Simples: limite_elegibilidade_simples presente e valido
+[PASS] Simples: partilha_percentual_base definido como decimal_0_1
+[PASS] Simples: fator_r_limite presente e valido
+[PASS] Simples: anexo I possui 6 faixas
+  expected=6 | actual=6
+[PASS] Simples: anexo I faixa 1 partilha soma 1.0
+[PASS] Simples: anexo I faixa 2 partilha soma 1.0
+[PASS] Simples: anexo I faixa 3 partilha soma 1.0
+[PASS] Simples: anexo I faixa 4 partilha soma 1.0
+[PASS] Simples: anexo I faixa 5 partilha soma 1.0
+[PASS] Simples: anexo I faixa 6 partilha soma 1.0
+[PASS] Simples: anexo I valores nao negativos
+[PASS] Simples: anexo I limites crescentes
+[PASS] Simples: anexo II possui 6 faixas
+  expected=6 | actual=6
+[PASS] Simples: anexo II faixa 1 partilha soma 1.0
+[PASS] Simples: anexo II faixa 2 partilha soma 1.0
+[PASS] Simples: anexo II faixa 3 partilha soma 1.0
+[PASS] Simples: anexo II faixa 4 partilha soma 1.0
+[PASS] Simples: anexo II faixa 5 partilha soma 1.0
+[PASS] Simples: anexo II faixa 6 partilha soma 1.0
+[PASS] Simples: anexo II valores nao negativos
+[PASS] Simples: anexo II limites crescentes
+[PASS] Simples: anexo III possui 6 faixas
+  expected=6 | actual=6
+[PASS] Simples: anexo III faixa 1 partilha soma 1.0
+[PASS] Simples: anexo III faixa 2 partilha soma 1.0
+[PASS] Simples: anexo III faixa 3 partilha soma 1.0
+[PASS] Simples: anexo III faixa 4 partilha soma 1.0
+[PASS] Simples: anexo III faixa 5 partilha soma 1.0
+[PASS] Simples: anexo III faixa 6 partilha soma 1.0
+[PASS] Simples: anexo III valores nao negativos
+[PASS] Simples: anexo III limites crescentes
+[PASS] Simples: anexo IV possui 6 faixas
+  expected=6 | actual=6
+[PASS] Simples: anexo IV faixa 1 partilha soma 1.0
+[PASS] Simples: anexo IV faixa 2 partilha soma 1.0
+[PASS] Simples: anexo IV faixa 3 partilha soma 1.0
+[PASS] Simples: anexo IV faixa 4 partilha soma 1.0
+[PASS] Simples: anexo IV faixa 5 partilha soma 1.0
+[PASS] Simples: anexo IV faixa 6 partilha soma 1.0
+[PASS] Simples: anexo IV valores nao negativos
+[PASS] Simples: anexo IV limites crescentes
+[PASS] Simples: anexo V possui 6 faixas
+  expected=6 | actual=6
+[PASS] Simples: anexo V faixa 1 partilha soma 1.0
+[PASS] Simples: anexo V faixa 2 partilha soma 1.0
+[PASS] Simples: anexo V faixa 3 partilha soma 1.0
+[PASS] Simples: anexo V faixa 4 partilha soma 1.0
+[PASS] Simples: anexo V faixa 5 partilha soma 1.0
+[PASS] Simples: anexo V faixa 6 partilha soma 1.0
+[PASS] Simples: anexo V valores nao negativos
+[PASS] Simples: anexo V limites crescentes
+[PASS] Sentinela Simples: Anexo III faixa 4
+  expected={'aliquota_nominal': 0.16, 'parcela_deduzir': 35640.0} | actual={'aliquota_nominal': 0.16, 'parcela_deduzir': 35640}
+[PASS] Sentinela Simples Partilha: Anexo III faixa 4
+  expected={'IRPJ': 0.04, 'CSLL': 0.035, 'PIS': 0.0286, 'COFINS': 0.1312, 'CPP': 0.434, 'ICMS': 0.0, 'ISS': 0.3312} | actual={'IRPJ': 0.04, 'CSLL': 0.035, 'PIS': 0.0286, 'COFINS': 0.1312, 'CPP': 0.434, 'ICMS': 0.0, 'ISS': 0.3312}
+[PASS] Presumido: chave obrigatoria 'pis'
+[PASS] Presumido: chave obrigatoria 'cofins'
+[PASS] Presumido: chave obrigatoria 'irpj'
+[PASS] Presumido: chave obrigatoria 'adicional_irpj'
+[PASS] Presumido: chave obrigatoria 'csll'
+[PASS] Presumido: chave obrigatoria 'limites_adicional_irpj'
+[PASS] Presumido: chave obrigatoria 'percentual_presuncao'
+[PASS] Real: chave obrigatoria 'irpj'
+[PASS] Real: chave obrigatoria 'csll'
+[PASS] Real: chave obrigatoria 'pis_nao_cumulativo'
+[PASS] Real: chave obrigatoria 'cofins_nao_cumulativo'
+[PASS] Real: faixa valida para 'pis_nao_cumulativo'
+[PASS] Real: faixa valida para 'cofins_nao_cumulativo'
+[PASS] Eligibility: seção 'simples'
+[PASS] Eligibility: seção 'presumido'
+[PASS] Eligibility: seção 'real'
+[PASS] Eligibility Simples: rbt12_max válido
+[PASS] Eligibility Presumido: receita_anual_max válido
+[PASS] Eligibility Real: warnings em lista
+[PASS] Baseline parity: simples_tables.json
+[PASS] Baseline parity: presumido_params.json
+[PASS] Baseline parity: real_params.json
+[PASS] Baseline parity: eligibility_rules.json
+
+JSON diffs (baseline vs ruleset):
+- none

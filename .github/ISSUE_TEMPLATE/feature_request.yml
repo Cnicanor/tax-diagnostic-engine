@@ -1,0 +1,45 @@
+name: Feature Request
+description: Solicitar nova funcionalidade com escopo e critérios claros.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema/Oportunidade
+      description: Qual problema de negócio/técnico esta feature resolve?
+      placeholder: Descreva o problema atual e o impacto.
+    validations:
+      required: true
+
+  - type: textarea
+    id: escopo
+    attributes:
+      label: Escopo da Feature
+      description: O que entra e o que não entra nesta entrega?
+      placeholder: Liste objetivos, limites e exclusões.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Proposta de Solução
+      description: Descreva a abordagem esperada.
+      placeholder: Inclua impacto em módulos, arquitetura e riscos.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: Definition of Done (DoD)
+      description: Marque os itens obrigatórios para fechamento.
+      options:
+        - label: Testes executados com sucesso (`python -m unittest -v`)
+        - label: Ruleset audit executado com sucesso (`python tools/ruleset_audit.py`)
+        - label: Sem artefatos no PR (`__pycache__`, `build`, `dist`, `outputs`, `*.jsonl`, PDFs gerados)
+        - label: Evidências anexadas (logs/prints/trechos de relatório)
+        - label: Impacto esperado descrito
+

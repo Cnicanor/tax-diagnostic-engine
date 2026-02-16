@@ -1,0 +1,68 @@
+name: PR Guardrails
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  guardrails:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate PR checklist completion
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          set -euo pipefail
+          body="${PR_BODY:-}"
+          checked_count=$(printf "%s" "$body" | grep -Eio '\- \[[xX]\]' | wc -l | tr -d ' ')
+          echo "Checklist marcado: $checked_count item(ns)"
+          if [ "$checked_count" -lt 3 ]; then
+            echo "ERRO: O PR deve conter ao menos 3 itens marcados no checklist (- [x])."
+            exit 1
+          fi
+
+      - name: Block forbidden generated artifacts in PR
+        run: |
+          set -euo pipefail
+          git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+          changed_files=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")
+
+          if [ -z "$changed_files" ]; then
+            echo "Nenhum arquivo alterado detectado."
+            exit 0
+          fi
+
+          forbidden=""
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            lower=$(printf "%s" "$file" | tr '[:upper:]' '[:lower:]')
+
+            if [[ "$file" =~ (^|/)__pycache__/ ]] || \
+               [[ "$lower" == *.pyc ]] || \
+               [[ "$lower" == *.pyo ]] || \
+               [[ "$file" =~ (^|/)build/ ]] || \
+               [[ "$file" =~ (^|/)dist/ ]] || \
+               [[ "$file" =~ (^|/)outputs[^/]*/ ]] || \
+               [[ "$lower" == *.jsonl ]] || \
+               [[ "$lower" == *.pdf ]]; then
+              forbidden="${forbidden}${file}\n"
+            fi
+          done <<< "$changed_files"
+
+          if [ -n "$forbidden" ]; then
+            echo "ERRO: Arquivos proibidos detectados no PR:"
+            printf "%b" "$forbidden"
+            echo "Remova artefatos gerados (__pycache__, pyc/pyo, build/dist, outputs*, *.jsonl, PDFs)."
+            exit 1
+          fi
+
+          echo "Guardrail OK: nenhum artefato proibido detectado."
